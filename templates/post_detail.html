@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <p> {{object.title}} </p>
 
 <img src="http://{{ request.META.HTTP_HOST }}/{{object.image}}">
@@ -6,3 +10,5 @@
     <a href="{% url 'update_post' object.pk %}"> Update Post Title</a>
     <a href="{% url 'delete_post' object.pk %}"> Delete Post Title</a>
 </div>
+
+{% endblock content %}
